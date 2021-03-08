@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Site Design used :
+	Site Design & Guid
+-->
+<Config>
+  <AppName>SharePoint Online Factory</AppName>
+  <Version>0.1</Version>
+  <!--LogoFilePath-->
+  <LogoFilePath></LogoFilePath>
+  <!--Required Modules-->
+  <RequiredModule>
+    <Name>Microsoft.Online.SharePoint.PowerShell</Name>
+    <Name>CredentialManagement</Name>
+  </RequiredModule>
+  <!--Required Dll-->
+  <ReguiredDll>
+    <Name>Microsoft.SharePoint.Client</Name>
+    <Name>Microsoft.SharePoint.Client.Runtime</Name>
+  </ReguiredDll>
+  <!--Authentication info-->
+  <SPOAdminLogger>
+    <Url></Url>
+    <CredentialName></CredentialName>
+  </SPOAdminLogger>
+  <SPOSiteRootUrl></SPOSiteRootUrl>
+  <!--SPO Site Templates-->
+  <!--External Team site-->
+  <SPOTemplate>
+    <!--New-SPOSite Values-->
+    <Name>LA-ExternalTeamSite</Name>
+    <SPOTemplate>STS#3</SPOTemplate>
+    <StorageQuota>1000</StorageQuota>
+    <!--Set-SPOSite Values-->
+    <ExternalSharing>ExistingExternalUserSharingOnly</ExternalSharing>
+    <SharingForNonOnwer>OFF</SharingForNonOnwer>
+    <AllowAccessRequest>OFF</AllowAccessRequest>
+    <!--Custom CmdLet Values-->
+    <Classification>External</Classification>
+    <!--SiteDesign Values-->
+    <SiteDesignId></SiteDesignId>
+  </SPOTemplate>
+    <SPOTemplate>
+    <!--New-SPOSite Values-->
+    <Name>LA-ExternalComSite</Name>
+    <SPOTemplate>SITEPAGEPUBLISHING#0</SPOTemplate>
+    <StorageQuota>1000</StorageQuota>
+    <!--Set-SPOSite Values-->
+    <ExternalSharing>ExistingExternalUserSharingOnly</ExternalSharing>
+    <SharingForNonOnwer>OFF</SharingForNonOnwer>
+    <AllowAccessRequest>OFF</AllowAccessRequest>
+    <!--Custom CmdLet Values-->
+    <Classification>External</Classification>
+    <!--SiteDesign Values-->
+    <SiteDesignId></SiteDesignId>
+  </SPOTemplate>
+  <!--DIVISION TEMPLATE-->
+  <SPOTemplate>
+    <Name>LA Division Site</Name>
+    <Multilingual>OFF</Multilingual>
+    <SPOTemplate>STS#3</SPOTemplate>
+    <StorageQuota>1000</StorageQuota>
+    <ExternalSharing>Disabled</ExternalSharing>
+    <SharingForNonOnwer>OFF</SharingForNonOnwer>
+    <AllowAccessRequest>OFF</AllowAccessRequest>
+    <Classification>Internal Only</Classification>
+    <SiteDesignId></SiteDesignId>
+    <IsHubSite>OFF</IsHubSite>
+    <HubSiteUrl></HubSiteUrl>
+    <AddToHubSiteNavigation>OFF</AddToHubSiteNavigation>
+    <HubSiteNavParent></HubSiteNavParent>
+    <StaticOwner></StaticOwner>
+  </SPOTemplate>
+  <!--Region values to set language and TimeZone New-SPOSite Values-->
+  <Region>
+    <Name>FR</Name>
+    <Lcid>1036</Lcid>
+    <TimeZone>3</TimeZone>
+  </Region>
+  <Region>
+    <Name>EN</Name>
+    <Lcid>1033</Lcid>
+    <TimeZone>2</TimeZone>
+  </Region>
+  <Region>
+    <Name>US</Name>
+    <Lcid>1033</Lcid>
+    <TimeZone>13</TimeZone>
+  </Region>
+  <Region>
+    <Name>DE</Name>
+    <Lcid>1031</Lcid>
+    <TimeZone>4</TimeZone>
+  </Region>
+  <!--ContentType values to set in SharePoint Online libraries-->
+  <ContentType>
+    <Name></Name>
+  </ContentType>
+</Config>
