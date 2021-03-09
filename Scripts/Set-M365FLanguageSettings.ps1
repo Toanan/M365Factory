@@ -1,4 +1,4 @@
-Function Set-SPOFLanguageSettings ($SiteUrl,$MultilingualSetting){
+Function Set-M365FLanguageSettings ($SiteUrl,$MultilingualSetting){
 
     #Creating client context CSOM
     $SPOCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($Global:AdminCredentials.UserName , $Global:AdminCredentials.Password)

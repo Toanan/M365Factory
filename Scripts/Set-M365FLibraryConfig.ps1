@@ -1,5 +1,5 @@
 ﻿#function to disable library syncronization
-function Set-SPOFLibraryConfig ($SiteUrl, $LibraryName, $LibSync, $Versionning) {
+function Set-M365FLibraryConfig ($SiteUrl, $LibraryName, $LibSync, $Versionning) {
 
     #Creating client context CSOM
     $SPOCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($Global:AdminCredentials.UserName , $Global:AdminCredentials.Password)

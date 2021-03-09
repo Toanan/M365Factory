@@ -14,7 +14,7 @@
     .NOTES
         
     #> 
-Function Set-SPOFAccessRequest {
+Function Set-M365FAccessRequest {
     [CmdletBinding()]
     Param( 
         [parameter(Mandatory=$True)]

@@ -8,7 +8,7 @@
 .EXAMPLE
    Another example of how to use this cmdlet
 #>
-function Get-SPOFAssociatedSite
+function Get-M365FAssociatedSite
 {
     [CmdletBinding()]
     [Alias()]

@@ -1,4 +1,4 @@
-Function Search-SPOFSiteExists{
+Function Search-M365FSiteExists{
     [CmdletBinding()]
     Param(
       [parameter(Mandatory=$True)]

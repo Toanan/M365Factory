@@ -1,5 +1,5 @@
 ﻿#function to set Site classification
-function Set-SPOFSiteClassification ($SiteUrl, $SiteClassification) {
+function Set-M365FSiteClassification ($SiteUrl, $SiteClassification) {
 
     <# CSOM - not working properly 
     #Creating client context CSOM

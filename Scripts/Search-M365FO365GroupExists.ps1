@@ -1,5 +1,5 @@
 ﻿#Function to check if an O365Group exists
-function Search-SPOFO365GroupExists ($O365GroupName) {
+function Search-M365FO365GroupExists ($O365GroupName) {
 
     [bool]$GroupExists = $false
     try{$O365Group = Get-UnifiedGroup -identity $O365GroupName -ErrorAction Stop }catch{$GroupExists = $false}

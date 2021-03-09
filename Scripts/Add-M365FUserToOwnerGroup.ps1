@@ -14,7 +14,7 @@
     .NOTES
         
     #> 
-    Function Add-SPOFUserToOwnerGroup {
+    Function Add-M365FUserToOwnerGroup {
         [CmdletBinding()]
         Param( 
             [parameter(Mandatory=$True)]
@@ -23,7 +23,7 @@
             [String]$Email
         )
 
-        Connect-PnPOnline -Url $SiteUrl -Credentials $Global:XMLConfig.Config.SPOAdminLogger.CredentialName | Out-Null
+        Connect-M365F -PNP -PNPUrl $SiteUrl
         $OwnerGroup = Get-PnPGroup -AssociatedOwnerGroup
         Add-PnPUserToGroup -LoginName $Email -Identity $OwnerGroup.Id
 
