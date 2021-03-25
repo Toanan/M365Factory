@@ -32,22 +32,14 @@ Catch
 
 # XML Config file
 $ConfigPath = "$ScriptPath\Tools\SPOFCFG_BTCS.xml"
-Try
-{
-    
-    [XML]$AppConfig = Get-Content $ConfigPath -ErrorAction Stop
-}
-Catch
-{
-    throw "$ScriptPath\Tools\SPOFCfg_BTCS.xml not found or depreciated"
-}
 
-#Import XML Setting file
-Import-M365FSetting -XMLConfig $AppConfig
+#Import XML Setting file & Start watching for changes
+Import-M365FSetting -ConfigPath $ConfigPath
+Start-M365FConfigWatcher -ConfigPath $ConfigPath
 
 Write-Host "$($XmlConfig.Config.AppName) Version $($XMLConfig.Config.Version) loaded" -ForegroundColor DarkGreen
 
 #Check if setup is required
 if ([string]::IsNullOrEmpty($Global:XMLConfig.Config.SPOAdminLogger.Url)) {
-        Start-M365Fsetup -AppConfig $AppConfig -ConfigPath $ConfigPath
+        Start-M365Fsetup -AppConfig $XMLConfig -ConfigPath $ConfigPath
 }

@@ -1,13 +1,16 @@
 #Requires -version 4.0
     <#
       .SYNOPSIS
-      Add a library to a SharePoint Online Site
+      Start the Config setup process
   
       .DESCRIPTION
-      Add a library to a SharePoint Online Site
+      Start the Config setup process by asking SPO Admin url and Crednetials Name
   
-      .PARAMETER Name
-      String name of the library
+      .PARAMETER AppConfig
+      XML Content of the config file
+
+      .PARAMETER ConfigPath
+      String path to config file
     #>
     Function Start-M365FSetup {
     
