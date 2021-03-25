@@ -7,7 +7,8 @@
   <AppName>SharePoint Online Factory</AppName>
   <Version>0.1</Version>
   <!--LogoFilePath-->
-  <LogoFilePath></LogoFilePath>
+  <LogoFilePath>
+  </LogoFilePath>
   <!--Required Modules-->
   <RequiredModule>
     <Name>Microsoft.Online.SharePoint.PowerShell</Name>
@@ -23,7 +24,8 @@
     <Url></Url>
     <CredentialName></CredentialName>
   </SPOAdminLogger>
-  <SPOSiteRootUrl></SPOSiteRootUrl>
+  <SPOSiteRootUrl>
+  </SPOSiteRootUrl>
   <!--SPO Site Templates-->
   <!--External Team site-->
   <SPOTemplate>
@@ -38,9 +40,10 @@
     <!--Custom CmdLet Values-->
     <Classification>External</Classification>
     <!--SiteDesign Values-->
-    <SiteDesignId></SiteDesignId>
+    <SiteDesignId>
+    </SiteDesignId>
   </SPOTemplate>
-    <SPOTemplate>
+  <SPOTemplate>
     <!--New-SPOSite Values-->
     <Name>LA-ExternalComSite</Name>
     <SPOTemplate>SITEPAGEPUBLISHING#0</SPOTemplate>
@@ -52,7 +55,8 @@
     <!--Custom CmdLet Values-->
     <Classification>External</Classification>
     <!--SiteDesign Values-->
-    <SiteDesignId></SiteDesignId>
+    <SiteDesignId>
+    </SiteDesignId>
   </SPOTemplate>
   <!--DIVISION TEMPLATE-->
   <SPOTemplate>
@@ -64,12 +68,16 @@
     <SharingForNonOnwer>OFF</SharingForNonOnwer>
     <AllowAccessRequest>OFF</AllowAccessRequest>
     <Classification>Internal Only</Classification>
-    <SiteDesignId></SiteDesignId>
+    <SiteDesignId>
+    </SiteDesignId>
     <IsHubSite>OFF</IsHubSite>
-    <HubSiteUrl></HubSiteUrl>
+    <HubSiteUrl>
+    </HubSiteUrl>
     <AddToHubSiteNavigation>OFF</AddToHubSiteNavigation>
-    <HubSiteNavParent></HubSiteNavParent>
-    <StaticOwner></StaticOwner>
+    <HubSiteNavParent>
+    </HubSiteNavParent>
+    <StaticOwner>
+    </StaticOwner>
   </SPOTemplate>
   <!--Region values to set language and TimeZone New-SPOSite Values-->
   <Region>
@@ -94,6 +102,7 @@
   </Region>
   <!--ContentType values to set in SharePoint Online libraries-->
   <ContentType>
-    <Name></Name>
+    <Name>
+    </Name>
   </ContentType>
 </Config>

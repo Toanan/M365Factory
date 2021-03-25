@@ -31,9 +31,11 @@ Catch
 }
 
 # XML Config file
+$ConfigPath = "$ScriptPath\Tools\SPOFCFG_BTCS.xml"
 Try
 {
-    [XML]$AppConfig = Get-Content "$ScriptPath\Tools\SPOFCFG_BTCS.xml" -ErrorAction Stop
+    
+    [XML]$AppConfig = Get-Content $ConfigPath -ErrorAction Stop
 }
 Catch
 {
@@ -44,3 +46,8 @@ Catch
 Import-M365FSetting -XMLConfig $AppConfig
 
 Write-Host "$($XmlConfig.Config.AppName) Version $($XMLConfig.Config.Version) loaded" -ForegroundColor DarkGreen
+
+#Check if setup is required
+if ([string]::IsNullOrEmpty($Global:XMLConfig.Config.SPOAdminLogger.Url)) {
+        Start-M365Fsetup -AppConfig $AppConfig -ConfigPath $ConfigPath
+}
